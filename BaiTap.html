@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doan Manh Phat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            margin: 20px;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px;
+            width: 150px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        #ketqua {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<input type="number" id="number1" placeholder="Nhập số thứ nhất">
+<input type="number" id="number2" placeholder="Nhập số thứ hai">
+<br>
+<button onclick="Cong()">Cộng</button>
+<button onclick="Tru()">Trừ</button>
+<button onclick="Nhan()">Nhân</button>
+<button onclick="Chia()">Chia</button>
+
+<h2>Kết quả:</h2>
+<div id="ketqua">Kết quả phép tính là: </div>
+
+<script>
+    function Cong() {
+        let so1 = document.getElementById("number1").value;
+        let so2 = document.getElementById("number2").value;
+        let ketqua = Number(so1) + Number(so2);
+        document.getElementById("ketqua").innerHTML = "Kết quả: " + ketqua.toFixed(2);
+    }
+
+    function Tru() {
+        let so1 = document.getElementById("number1").value;
+        let so2 = document.getElementById("number2").value;
+        let ketqua = Number(so1) - Number(so2);
+        document.getElementById("ketqua").innerHTML = "Kết quả: " + ketqua.toFixed(2);
+    }
+
+    function Nhan() {
+        let so1 = document.getElementById("number1").value;
+        let so2 = document.getElementById("number2").value;
+        let ketqua = Number(so1) * Number(so2);
+        document.getElementById("ketqua").innerHTML = "Kết quả: " + ketqua.toFixed(2);
+    }
+
+    function Chia() {
+        let so1 = document.getElementById("number1").value;
+        let so2 = document.getElementById("number2").value;
+        let ketqua = Number(so1) / Number(so2);
+        document.getElementById("ketqua").innerHTML = "Kết quả: " + ketqua.toFixed(2);
+    }
+</script>
+</body>
+
+</html>
